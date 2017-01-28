@@ -1,0 +1,24 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!--
+        Набор данных атрибутов с указанными значениями будет применен к компоненту, к которому будет применен стиль,
+        что позволяет сократить размер ненужного кода в xml-разметке и уменьшить возможность ошибок
+     !-->
+    <style name="AppTheme.MyEditText" parent="Widget.AppCompat.EditText">
+        <item name="android:paddingLeft">@dimen/edit_text_padding_left</item>
+        <item name="android:paddingRight">@dimen/edit_text_padding_right</item>
+        <item name="android:paddingTop">@dimen/edit_text_padding_top</item>
+        <item name="android:paddingBottom">@dimen/edit_text_padding_bottom</item>
+        <item name="android:textSize">@dimen/edit_text_text_size</item>
+        <item name="android:textColor">@color/colorTextPrimary</item>
+    </style>
+
+</resources>

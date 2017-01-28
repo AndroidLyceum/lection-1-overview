@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    >
+    <!--
+        Коренным (root) элементом данного layout-а является RelativeLayout, то есть - контейнер, в котором можно верстать относительно
+        Добавим возможность интерактива между пользователем и нашим приложением путем добавления EditText элемента под нашим TextView
+    !-->
+    <TextView
+        android:id="@+id/text_view_echo_output"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <!--
+        Чтобы задать относительное расположение элементов, требуется задать "цели" уникальный идентификатор путем указания аттрибута android:id
+        android:layout_below аттрибут определяет расположение данного элемента под заданным, в нашем случае - text_view_echo_output
+    !-->
+    <EditText
+        android:id="@+id/edit_text_echo_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_view_echo_output"
+        style="@style/AppTheme.MyEditText"
+        tools:text="Можно использовать префикс tools для применения аттрибута только в designer's preview, для того, чтобы быстро проверить, как будет, например, выглядеть наполненный контентом компонент"
+        />
+
+</RelativeLayout>

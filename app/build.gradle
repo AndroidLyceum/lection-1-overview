@@ -1,0 +1,40 @@
+apply plugin: 'com.android.application'
+
+/**
+ * Конфиг-файл модуля, содержит в себе блоки
+ * android {...} - андроид-специфическая информация
+ * defaultConfig {...} - блок, который инкапсулирует дефолтную конфигурацию в кастомные
+ * buildTypes {...} - блок, сожержащий различные конфигурации билда, по дефолту андроид создает release тип
+ * */
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.2"
+    defaultConfig {
+        applicationId "net.styleru.i_komarov.lyceumlection1overview"
+        minSdkVersion 16
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+/**
+ * Зависимости модуля, в которые, при необходимости подключить библиотеку с удаленного репозитория, следует ее добавить
+ * */
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    testCompile 'junit:junit:4.12'
+}

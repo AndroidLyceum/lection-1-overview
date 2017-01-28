@@ -1,0 +1,29 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+/**
+ * Данный конфигурационный файл относится к проекту
+ * Он содержит два важных блока - первый, buildscript, в котором указываются репозитории
+ * и зависимости, необходимые Gradle для правильной работы,
+ * второй - allprojects - в которых можно указать репозитории и зависимости, необходимые для каждого модуля
+ * */
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.2.2'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- Данный view-компонент будет снизу, поскольку добавлен первым, каждый последующий будет перекрывать его !-->
+    <View
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#33004400"
+        />
+    <!-- В designer's preview можно видеть перекрывание одного View другим за счет разных цветов !-->
+    <View
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#33000044"
+        />
+</FrameLayout>
